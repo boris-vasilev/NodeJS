@@ -1,4 +1,4 @@
 # NodeJS
 NodeJS Learning repo
 
-(1. Introduction to NodeJS - Exercises)[https://github.com/boris-vasilev/NodeJS/tree/master/1.IntroductionToNodeJS_exercises]
+[https://github.com/boris-vasilev/NodeJS/tree/master/1.IntroductionToNodeJS_exercises](1. Introduction to NodeJS - Exercises)
