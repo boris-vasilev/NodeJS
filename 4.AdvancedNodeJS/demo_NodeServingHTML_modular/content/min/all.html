@@ -1,0 +1,7 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Title</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script></head><body><table id="images"><tr><th>Name</th><th>Details URL</th></tr></table><script>$.get('/images/data',(data)=>{
+    data = JSON.parse(data)
+    for (let i =0; i<data.length;i++){
+//        console.log(data[i])
+        $('#images').append(`<tr><td>${data[i].name}</td><td><a href="http://localhost:5555/images/details/${data[i].id}">Link to details ${data[i].id}</a></td></tr>`)
+    }
+})</script><a href="http://localhost:5555/">Go to homepage</a></body></html>
