@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details page</title>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        img{
+            width:500px
+        }
+    </style>
+</head>
+<body>
+    <h1>Details</h1>
+    <script>
+        $.get('/images/data',(data)=>{
+            data = JSON.parse(data)
+            let id = window.location.href.split('/').pop()
+            let item
+            for(let i =0; i< data.length; i++){
+                if(data[i].id==id){
+                    item = data[i]
+                }
+            }
+            console.log(item)
+            $('body').append(`<h2>Name: ${item.name}</h2> <img src="${'.'+item.path.substr(16)}" alt="">`)
+        })
+    </script>
+</body>
+</html>

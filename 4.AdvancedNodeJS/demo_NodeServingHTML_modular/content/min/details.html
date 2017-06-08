@@ -1,5 +1,0 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Details page</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script></head><body><h1>Details</h1><script>$.get('/images/data',(data)=>{
-            data = JSON.parse(data)
-            let id = window.location.href.split('/').pop()
-            $('body').append(`<h2>Name: ${data[id-1].name}</h2> <img src="${data[id-1].url}" alt="">`)
-        })</script></body></html>
