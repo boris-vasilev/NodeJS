@@ -1,0 +1,9 @@
+nav ul li {
+    text-decoration: none;
+    display: inline-block;
+    list-style: none;
+    margin-right: 15px;
+}
+img{
+    width: 500px;
+}
