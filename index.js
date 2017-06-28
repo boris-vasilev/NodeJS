@@ -8,9 +8,9 @@ const handlebars = require('express-handlebars')
 mongoose.Promise = global.Promise
 let env = process.env.NODE_ENV || 'development'
 let port = process.env.PORT || 1337
-app.engine('handlebars',{
+app.engine('handlebars',handlebars({
     defaultLayout:'main'
-})
+}))
 app.set('view engine','handlebars')
 app.use('/public',express.static('public'))
 app.get('/', (req, res) => {
