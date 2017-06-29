@@ -1,0 +1,15 @@
+{
+  "name": "introduction_to_nodejs",
+  "version": "0.0.1",
+  "description": "Introduction to NodeJS exercises -SoftUni",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Boris Vasilev",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.0.1"
+  }
+}

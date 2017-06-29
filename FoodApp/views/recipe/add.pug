@@ -1,0 +1,18 @@
+extends ../layout
+block content
+    h2 Add image
+    form(method="POST" enctype="multipart/form-data")
+        label Recipe name:
+        br
+        input(type="text" name="name")
+        br
+        br
+        label Description:
+        br
+        textarea(name="description")
+        br
+        br
+        label Image:
+        input(type="file" name="recipeImage" accept=".png,.jpg,.jpeg")
+        br
+        input(type="submit" value="Add")
