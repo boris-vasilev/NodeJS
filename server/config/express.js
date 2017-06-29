@@ -6,7 +6,6 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const passport = require('passport')
-
 const handlebars = require('express-handlebars')
 module.exports=(app)=>{
     app.engine('handlebars',handlebars({

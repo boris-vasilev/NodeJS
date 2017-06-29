@@ -11,6 +11,8 @@ let userSchema = new mongoose.Schema({
     lastName:{type:String,required:REQUIERED_VALIDATION_MESSAGE},
     salt:{type:String},
     hashedPass:{type:String,},
+    articlesID:[{type:String, ref:'Article'}],
+    articlesNames:[{type:String, ref:'Article'}],
     roles:[String]
 })
 userSchema.method({

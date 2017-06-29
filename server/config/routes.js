@@ -1,6 +1,7 @@
 /**
  * Created by boris on 6/28/2017.
  */
+const auth = require('./auth')
 const controllers = require('../controllers/index')
 module.exports=(app)=>{
     app.get('/', controllers.home.index)
@@ -10,6 +11,10 @@ module.exports=(app)=>{
     app.get('/users/login',controllers.users.loginGet)
     app.post('/users/login',controllers.users.loginPost)
     app.post('/users/logout',controllers.users.logout)
+    app.get('/article/add',auth.isAuthenticated,controllers.article.addGet)
+    app.post('/article/add',auth.isAuthenticated,controllers.article.addPost)
+    app.get('/article/all',controllers.article.allGet)
+    app.get('/article/my',auth.isAuthenticated,controllers.article.myGet)
     app.all('*',(req,res)=>{
         res.status(404)
         res.send('404 Not found')

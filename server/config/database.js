@@ -3,6 +3,7 @@
  */
 const mongoose = require('mongoose')
 const User = require('../data/User')
+const Article = require('../data/Article')
 mongoose.Promise = global.Promise
 module.exports=(settings)=>{
     mongoose.connect(settings.db)
