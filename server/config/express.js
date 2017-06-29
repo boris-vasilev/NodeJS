@@ -19,5 +19,11 @@ module.exports=(app)=>{
         resave: false, saveUninitialized: false }))
     app.use(passport.initialize())
     app.use(passport.session())
+    app.use((req,res,next)=>{
+        if(req.user){
+            res.locals.currentUser = req.user
+        }
+        next()
+    })
     app.use('/public',express.static('public'))
 }

@@ -14,7 +14,7 @@ let userSchema = new mongoose.Schema({
     roles:[String]
 })
 userSchema.method({
-    authenticate:(password)=>{
+    authenticate:function (password){
         return encryption.generateHashedPassword(this.salt,password)===this.hashedPass
     }
 })
