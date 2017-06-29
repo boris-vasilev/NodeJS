@@ -63,8 +63,19 @@ module.exports = {
         res.redirect('/')
     },
     profileGet:(req,res)=>{
-        User.find({username:req.params.username}).then((profile)=>{
-            res.render('users/profile',{profile:profile})
+        User.findOne({username:req.params.username}).then((profile)=>{
+            // console.log(profile)
+            let articles = []
+            for(let i =0; i<profile.articlesID.length;i++){
+                articles.push({id:profile.articlesID[i],name:profile.articlesNames[i]})
+            }
+            let passedProfile = {
+                username:profile.username,
+                firstName:profile.firstName,
+                lastName:profile.lastName
+            }
+            console.log(passedProfile)
+            res.render('users/profile',{profile:passedProfile,articles:articles})
         })
     }
 }

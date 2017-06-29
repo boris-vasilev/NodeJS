@@ -1,9 +1,7 @@
-{{#each profile}}
-    <h1>{{this.username}} <span id = "names">({{this.firstName}} {{this.lastName}})</span></h1>
+{{#profile}}
+    <h1>{{this.username}} <span id = "names">{{this.firstName}} {{this.lastName}}</span></h1>
     <h2>Articles:</h2>
-{{/each}}
-{{#each profile}}
-    {{#each ../profile}}
-            <div><a href="/article/details/{{../this.articlesID}}">{{this.articlesNames}}</a></div>
-    {{/each}}
+{{/profile}}
+{{#each articles}}
+    <div><a href="/article/details/{{this.id}}">{{this.name}}</a></div>
 {{/each}}
