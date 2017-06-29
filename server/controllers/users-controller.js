@@ -61,5 +61,10 @@ module.exports = {
     logout:(req,res)=>{
         req.logout()
         res.redirect('/')
+    },
+    profileGet:(req,res)=>{
+        User.find({username:req.params.username}).then((profile)=>{
+            res.render('users/profile',{profile:profile})
+        })
     }
 }

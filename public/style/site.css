@@ -1,5 +1,9 @@
 h1 {
-    color: red
+
+}
+#names{
+    color:grey;
+    font-size:0.7em;
 }
 .container {
     padding-left: 25%

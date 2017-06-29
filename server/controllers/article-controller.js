@@ -34,8 +34,6 @@ module.exports={
     },
     myGet:(req,res)=>{
         User.findById(req.user._id).then((user)=>{
-            console.log(user.articlesID)
-            console.log('\n')
             let artArr = []
             for(let i =0; i<user.articlesID.length;i++){
                 artArr.push({
@@ -43,8 +41,12 @@ module.exports={
                     articleName:user.articlesNames[i]
                 })
             }
-            console.log(artArr)
             res.render('article/my',{articles:artArr})
+        })
+    },
+    detailsGet:(req,res)=>{
+        Article.findById(req.params.id).then((article)=>{
+            res.render('article/details',{article:article})
         })
     }
 }
