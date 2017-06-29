@@ -1,0 +1,7 @@
+{{#each article}}
+    <h1>
+        {{this.title}}
+    </h1>
+    <p>{{this.description}}</p>
+    <h2><a href="/users/profile/{{this.creator}}">{{this.creator}}</a></h2>
+{{/each}}

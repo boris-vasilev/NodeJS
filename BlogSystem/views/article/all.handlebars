@@ -1,0 +1,12 @@
+<table border="1">
+    <tr>
+        <th>Article</th>
+        <th>Creator</th>
+    </tr>
+    {{#each articles}}
+        <tr>
+            <td><a href="/article/details/{{this._id}}">{{this.title}}</a></td>
+            <td><a href="/users/profile/{{this.creator}}">{{this.creator}}</a></td>
+        </tr>
+    {{/each}}
+</table>
